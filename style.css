@@ -1,0 +1,477 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Averta Light';
+}
+
+@font-face {
+  font-family: 'Averta Light';
+  src: url('fonts/sans-serif/Averta-Light.otf');
+}
+
+@font-face {
+  font-family: 'Averta Semibold Italic';
+  src: url('fonts/sans-serif/Averta Semibold Italic.otf');
+}
+
+.avertsemibold a{font-family: 'Averta Semibold Italic'; text-decoration: none;color: #808080;}
+/*
+@font-face {
+  font-family: 'MonteCarlo';
+  src: url('fonts/cursive/MonteCarlo-Regular.ttf');
+}*/
+
+.avertsemibold{
+  font-family: 'Averta Semibold Italic';
+}
+
+.montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style:normal;
+}
+
+body{
+  background-color: #f7f7f7;
+  height: 45vh;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background: #ffffff;
+  padding: 15px;
+  z-index: 100;
+}
+
+.sidebar.close, .bg-dark.close{
+  display:none;
+}
+
+.logo {
+  font-size: 25px;
+  padding: 0 15px;
+}
+.sidebar a {
+  color: #252525;
+  text-decoration: none;
+}
+.sidebar a img{
+  width: 120px;
+}
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: #161616;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.item i {
+  font-size: 12px;
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #252525;
+  cursor: pointer;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: #fff;
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+
+.fixed{
+  position: fixed!important;
+  z-index: 999!important;
+}
+
+.navbar {
+  position: relative;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background: #f7f7f7;
+  cursor: pointer;
+  z-index: 80;
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+  color: #111111;
+}
+
+.main {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  z-index: 100;
+  background: url('images/ramits.svg') #f7f7f7;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 90;
+}
+
+.main .left-aside{
+  position: relative;
+  display: inline-block;
+  width: 0;
+}
+.main .content{
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+.main h1 {
+  color: #5f5f5f;
+  font-size: 42px;
+  margin-bottom: 0px;
+}
+
+.title-space {
+  letter-spacing: 10px;
+}
+
+#confirmation .text-xxl{
+  font-size: 80px;
+  margin: 32px 0;
+}
+
+#confirmation .text-xxl a{
+  font-family: "MonteCarlo", cursive;
+  font-style:normal;
+  color: #4e4e4e;
+  text-decoration: none;
+}
+
+#confirmation .text-lg{
+  font-size: 32px;
+}
+
+#reservations .text-lg{
+  font-size: 32px;
+  color: #737373;
+  margin: 52px 0 30px 0;
+}
+
+#reservations .vtt{
+  display: block;
+}
+
+#reservations .vtt li{
+  display: inline-block;
+  list-style: none;
+  width: 100px;
+  margin: 20px;
+}
+
+#reservations .vtt li {
+  font-weight: bold;
+  margin: 0 40px;
+}
+
+.lwords{margin-bottom: 10em;}
+
+.rel-text h1, .rel-text h2{
+  font-family: "MonteCarlo", cursive;
+  font-size: 80px;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 32px;
+  color: #4d4d4d;
+}
+
+.rel-text i, .rel-text p{
+  font-size: 32px;
+  color: #808080;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.sptr{
+  width: 30%;
+  margin: 24px auto;
+}
+
+.rel-text{
+  text-align: left;
+}
+.home-ulf-logo{
+  margin: auto;
+  width: 60%;
+}
+
+.home-married-text{
+  font-family: 'Averta Light';
+  color: #585858;
+}
+
+.home-song {
+    margin: auto;
+    width: 60%;
+}
+
+.home-song  .song img{
+  cursor: pointer;
+}
+
+.home-sharing-text{
+  color: #808080;
+  font-family: 'Averta Light';
+  font-size: 32px;
+  text-align: center;
+}
+
+.home-date-logo{
+  width: 60%;
+  margin: auto;
+}
+
+.home-song  {
+  text-align: center;
+}
+
+.home-song iframe {
+   width:  320px;
+}
+
+.sptr2{
+  width: 100%;
+  padding: 1px;
+  margin: 42px auto;
+  position: relative;
+  background-color: #e4c9b5;
+}
+
+#home, #ubication, #confirmation, #reservations, #interesting-sites, #gift{
+  display: none;
+}
+
+.show{
+  display: block!important;
+}
+
+.mb-4{
+  margin-bottom: 12px;
+}
+
+.lang-menu{
+  display: flex;
+  float: right;
+}
+
+.lang-menu li{
+  list-style: none;
+}
+
+.lang-menu li a img{
+  width: 45px;
+  margin: 0 6px;
+}
+
+.bg-dark{
+  position: fixed;
+  background-color: #1613133b;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.howtoget{
+  text-align: center;
+  font-size: 39px;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.howtoget a{
+  text-decoration: none;
+  font-size: 42px;
+  font-weight: bold;
+  color: #686565;
+  
+}
+
+#reservations .hotel-text{
+    font-size: 55px !important;
+    color: #737373;
+    margin: 52px 0 0 0;
+}
+
+#reservations a {
+  text-decoration: none;
+  
+}
+
+#reservations .hotel-text img{
+  width: 100px;
+}
+
+#reservations .hotel-text p{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#interesting-sites .rel-text{
+  margin-bottom: 42px;
+}
+
+.party{
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+@media (max-width: 500px){
+
+  .navbar{
+    margin-bottom: 20px ;
+  }
+  
+  .main h1{
+    font-size: 20px;
+  }
+
+  #confirmation .text-xxl{margin: 0;font-size: 0;}
+
+  #confirmation .text-xxl a{
+    font-size: 30px;
+  }
+  #confirmation .text-lg{
+    font-size: 16px;
+  }
+  .sptr{
+    width: 200px;
+    margin: 0 auto;
+  }
+  .sptr2{margin: 0;}
+  .home-ulf-logo, .home-date-logo{
+    width: 100%;
+  }
+   .home-song{
+    width: 100%;
+  }
+
+  .home-sharing-text{
+    font-size: 22px;
+  }
+
+  .home-song h1{
+    font-size: 22px;
+  }
+
+  .home-song iframe{
+    width: 100%;
+  }
+
+  .sptr2{
+    margin: 8px auto;
+  }
+
+  .howtoget{
+    margin-bottom: 20px
+  }
+
+  .howtoget a{
+    font-size: 14px;
+  }
+  .lang-menu li a img{
+    width: 30px;
+  }
+
+  #reservations .hotel-text img{width: 60px;}
+  #reservations .hotel-text{margin: 0;}
+  #reservations .hotel-text p{
+    font-size: 16px;
+  }
+  .rel-text h1, .rel-text h2{
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+  #reservations .text-lg{
+    margin: 6px auto;
+    font-size: 16px;
+  }
+  
+  #reservations a img{
+    width: 60px;
+  }
+  .rel-text i, .rel-text p{
+    font-size: 16px;
+  }
+
+  .lwords{margin-bottom:2em;}
+
+  .party{background-size: contain;background-repeat: no-repeat;}
+}
